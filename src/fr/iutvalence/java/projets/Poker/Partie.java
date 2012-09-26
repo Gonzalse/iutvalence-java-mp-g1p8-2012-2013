@@ -25,6 +25,7 @@ public class Partie {
 	private Table table;
 	
 	
+	//FIXME constructeurs, méthodes ?
 	
 	
 }

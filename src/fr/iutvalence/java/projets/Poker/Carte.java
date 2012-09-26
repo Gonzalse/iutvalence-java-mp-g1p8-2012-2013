@@ -13,7 +13,7 @@ public class Carte {
 	
 	//public final static string["pique","coeur","carreau","trËfle"];
 
-	// FIXME les attributs ont une nom commençant par une minuscule
+	// FIXME les attributs ont un nom commençant par une minuscule
 	private int VALEUR;
 	//public final static int NB_CARTES=52;
 	

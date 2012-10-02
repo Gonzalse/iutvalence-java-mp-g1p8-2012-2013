@@ -5,7 +5,7 @@ public class Partie {
 	
 	
 	/*
-	 * Nombre de joueurs présent dans la partie.
+	 * Nombre de joueurs prÃ©sents dans la partie.
 	 */
 	private int nbJoueurs;
 	
@@ -25,7 +25,7 @@ public class Partie {
 	private Table table;
 	
 	
-	//FIXME constructeurs, mthodes ?
+	//FIXME constructeurs, mÃ©thodes ?
 	
 	
 }

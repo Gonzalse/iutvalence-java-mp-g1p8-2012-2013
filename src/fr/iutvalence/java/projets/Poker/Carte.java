@@ -5,15 +5,15 @@ public class Carte {
 	 * 
 	 */
 	
-	// FIXME définir des constantes ou une énumération à part
-	// FIXME éviter les caractères accentués dans les noms de constantes
-	enum Couleur {Pique, Coeur, Carreau, TrËfle};
+	// FIXME d√©finir des constantes ou une √©num√©ration √† part
+	// FIXME √©viter les caract√®res accentu√©s dans les noms de constantes
+	enum Couleur {Pique, Coeur, Carreau, Tr√®fle};
 	//private Couleur couleur = Couleur;
 	
 	
-	//public final static string["pique","coeur","carreau","trËfle"];
+	//public final static string["pique","coeur","carreau","tr√®fle"];
 
-	// FIXME les attributs ont un nom commençant par une minuscule
+	// FIXME les attributs ont un nom commen√ßant par une minuscule
 	private int VALEUR;
 	//public final static int NB_CARTES=52;
 	

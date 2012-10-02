@@ -1,7 +1,7 @@
 package fr.iutvalence.java.projets.Poker;
 
 
-//FIXME Žcrire un commentaire correct
+//FIXME Ã©crire un commentaire correct
 public class Combinaison {
 
 }

@@ -1,8 +1,8 @@
-//FIXME déplacer dans le paquetage
+//FIXME d√©placer dans le paquetage
 public class Donneur {
 	
 	//FIXME le donneur a plusieurs noms ?	
-	//FIXME les attributs ont un nom commençant par une minuscule
+	//FIXME les attributs ont un nom commen√ßant par une minuscule
 	/*
 	 * Nom du joueur.
 	 */

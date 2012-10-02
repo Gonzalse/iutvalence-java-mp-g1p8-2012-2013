@@ -2,7 +2,7 @@ package fr.iutvalence.java.projets.Poker;
 
 public class Joueur {
 	
-	// FIXME les attributs ont un nom commençant par une minuscule
+	// FIXME les attributs ont un nom commen√ßant par une minuscule
 	// FIXME respecter la syntaxe Javadoc
 	/*
 	 * Nom du joueur.
@@ -11,7 +11,7 @@ public class Joueur {
 
 	// FIXME respecter la syntaxe Javadoc
 	/*
-	 * Nombre de jetons du joueur en dÈbut de partie.
+	 * Nombre de jetons du joueur en d√©but de partie.
 	 */
 	private int nbJetons = 3000;
 	

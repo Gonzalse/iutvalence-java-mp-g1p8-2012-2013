@@ -1,20 +1,47 @@
 package fr.iutvalence.java.projets.Poker;
 
+/*
+ * @author Hicham & Gonza
+ * @version 1 
+ */
+
 public class Carte {
+	
 	/*
-	 * 
+	 * Attributs
 	 */
 	
-	// FIXME définir des constantes ou une énumération à part
-	// FIXME éviter les caractères accentués dans les noms de constantes
-	enum Couleur {Pique, Coeur, Carreau, Trèfle};
-	//private Couleur couleur = Couleur;
+	/**
+	 * On énumère les 4 couleurs des cartes :
+	 */
+	private static String CARREAU = "CARREAU";
+    private static String TREFLE = "TREFLE";
+    private static String COEUR = "COEUR";
+    private static String PIQUE = "PIQUE";
+	
+    /**
+     * Une carte est définie par sa valeur ainsi que sa couleur.
+     */
+    private String couleur;
+	private String valeur;
 	
 	
-	//public final static string["pique","coeur","carreau","trèfle"];
-
-	// FIXME les attributs ont un nom commençant par une minuscule
-	private int VALEUR;
-	//public final static int NB_CARTES=52;
+	
+	/*
+	 * Constructeurs
+	 */
+	
+	public Carte (couleur c, valeur v)
+	{
+		this.valeur = v;
+		this.couleur = c;
+	}
+	
+	/*
+	 * Méthodes
+	 */
+	
+	
+	
 	
 }

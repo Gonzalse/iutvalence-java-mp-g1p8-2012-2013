@@ -1,18 +1,40 @@
 package fr.iutvalence.java.projets.Poker;
 
+/*
+ * @author Hicham & Gonza
+ * @version 1 
+ */
+
+
 public class Joueur {
 	
-	// FIXME les attributs ont un nom commençant par une minuscule
-	// FIXME respecter la syntaxe Javadoc
+	
 	/*
+	 * Attributs
+	 */
+	
+	/**
 	 * Nom du joueur.
 	 */
-	private String[] Nom;
+	private String nom;
 
-	// FIXME respecter la syntaxe Javadoc
+	private int nbJetons;
+	
+	
+	
 	/*
-	 * Nombre de jetons du joueur en début de partie.
+	 * Constructeurs
 	 */
-	private int nbJetons = 3000;
+	
+	public Joueur (String nomJoueur)
+	{
+		this.nom = nomJoueur;
+	}
+	
+	
+	
+	/*
+	 * Méthodes
+	 */
 	
 }

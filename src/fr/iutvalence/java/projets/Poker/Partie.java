@@ -32,12 +32,7 @@ public class Partie {
 	 * Nombre de cartes d'un jeu de cartes.
 	 */
 	private static int nbCartes=52;
-	
-	/**
-	 * Nombre de jetons par défaut.
-	 */
-	public final static int nbJetons_DEFAUT=3000;
-	private int jetons;
+
 	
 	/*
 	 * Constructeurs
@@ -49,12 +44,6 @@ public class Partie {
 			this.joueurs = new Joueur[nbJoueurs_DEFAUT];
 		else
 			this.joueurs = new Joueur[nbJoueur];
-		
-		//Initialisation du nombre de jetons :
-		if ((nbJetons < 500) || (nbJetons > 10000))
-			this.jetons = nbJetons_DEFAUT;
-		else
-			this.jetons = nbJetons;
 		
 		//Initialisation du donneur :
 		this.donneur = new Donneur();

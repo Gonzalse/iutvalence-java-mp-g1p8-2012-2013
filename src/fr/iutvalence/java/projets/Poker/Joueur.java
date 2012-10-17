@@ -24,7 +24,10 @@ public class Joueur {
 	 */
 	public final static int nbJetons_DEFAUT=3000;
 	
-	// FIXME écrire un commentaire
+	// FIXME (FIXED) écrire un commentaire
+	/**
+	 * Un joueur possède un nombre de jetons.
+	 */
 	private int nbJetons;
 	
 	
@@ -37,19 +40,16 @@ public class Joueur {
 	/**
 	 * Booléen permettant de savoir si le joueur est à tapis ou non.
 	 */
-	// FIXME utiliser le type primitif boolean
-	public Boolean estTapis;
+	// FIXME (FIXED) utiliser le type primitif boolean
+	public boolean estTapis;
 	
 	
-	// FIXME écrire un commentaire
-	// FIXME utiliser le type primitif boolean
-	public Boolean estTapis_DEFAUT = false;
-	
-	
+	// FIXME (FIXED) écrire un commentaire
 	/**
-	 * 
+	 * Booléen qui a pour valeur faux et qui permet d'initialiser le joueur a "non tapis".  
 	 */
-	
+	// FIXME (FIXED)utiliser le type primitif boolean
+	public boolean estTapis_DEFAUT = false;
 	
 	
 	
@@ -58,6 +58,12 @@ public class Joueur {
 	 * Constructeurs
 	 */
 	
+	/**
+	 * Permet de créer un joueur en indiquant son nom, son nombre de jetons et sa main.
+	 * @param nomJoueur : nom du joueur
+	 * @param jetons : nombre de jetons du joueur
+	 * @param mainJoueur : main (2 cartes) du joueur.
+	 */
 	public Joueur (String nomJoueur, int jetons, Carte[] mainJoueur)
 	{
 		//Initialisation du nom du joueur :
@@ -74,49 +80,11 @@ public class Joueur {
 	}
 	
 	
-	
+	// FIXME Méthodes ?
 	/*
 	 * Méthodes
 	 */
 	
-	// FIXME compléter le commentaire
-	/**
-	 * 
-	 */
-	// FIXME respecter les conventions d'écriture
-	public int Miser (int mise)
-	{
-		// Si le joueur tente de miser plus que ce qu'il possède, il est tapis.
-		if (c > this.nbJetons)
-			this.nbJetons = 0;
-			this.estTapis = true;
-			//Augmenter le pot !
-		else
-			this.nbJetons = this.nbJetons - mise;
-			//Augmenter le pot !
-	}
 	
-	// FIXME écrire un commentaire
-	// FIXME respecter les conventions d'écriture
-	public int Relance (int c)
-	{
-		
-	}
-	
-	// FIXME écrire un commentaire
-	// FIXME respecter les conventions d'écriture
-
-	public int Check()
-	{
-		
-	}
-	
-	// FIXME écrire un commentaire
-	// FIXME respecter les conventions d'écriture
-
-	public int Couche()
-	{
-		
-	}
 	
 }

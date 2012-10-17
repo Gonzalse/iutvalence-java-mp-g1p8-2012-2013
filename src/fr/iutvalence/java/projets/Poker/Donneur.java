@@ -12,9 +12,14 @@ public class Donneur {
 	 */
 	
 	/**
-	 * Nom du donneur.
+	 * Le donneur est identifié par son nom.
 	 */
-	private final String nom;
+	private final String nomDonneur;
+	
+	/**
+	 * Le nom du donneur par défaut est Javier.
+	 */
+	private final static String nom_DEFAUT = "Javier";
 	
 	
 	
@@ -22,14 +27,34 @@ public class Donneur {
 	/*
 	 * Constructeurs
 	 */
+	
+	/**
+	 * Sans paramètre, on donne un nom par défaut au donneur.
+	 */
 	public Donneur ()
 	{
-		this.nom = "Javier";
+		this.nomDonneur = nom_DEFAUT;
 	}
 	
-	// FIXME autre constructeur ?
-	// FIXME méthodes ?
+	// FIXME (FIXED) autre constructeur ?
+	/**
+	 * Le donneur prend le nom placé en paramètre.
+	 * @param choixNom : sert à donner un nom au donneur.
+	 */
+	public Donneur (String choixNom)
+	{
+		this.nomDonneur = choixNom;
+	}
+	// FIXME (FIXED) méthodes ?
 	/*
 	 * Méthodes
 	 */
+	
+	/**
+	 * Renvoi le nom du donneur.
+	 */
+	public String getNom()
+	{
+		return this.nomDonneur;
+	}
 }

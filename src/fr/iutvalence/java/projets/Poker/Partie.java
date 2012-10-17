@@ -15,26 +15,26 @@ public class Partie {
 	/**
 	 * Nombre de joueurs présents dans la partie.
 	 */
-	// FIXME définir une "vraie" constante
-	private int nbJoueurs_DEFAUT = 2;
+	// FIXME (FIXED) définir une "vraie" constante
+	private final static int nbJoueurs_DEFAUT = 2;
 	
-	// FIXME compléter le commentaire
+	// FIXME (FIXED) compléter le commentaire
 	/**
-	 *  
+	 *  Les joueurs de la partie seront stocké dans un tableau de joueurs.
 	 */
 	private Joueur[] joueurs;
 	
-	// FIXME compléter le commentaire
+	// FIXME (FIXED) compléter le commentaire
 	/**
-	 * 
+	 * La partie contient un donneur chargé de distribuer les cartes.
 	 */
 	private Donneur donneur;
 	
-	// FIXME définir une "vraie" constante	
+	// FIXME (FIXED) définir une "vraie" constante	
 	/**
 	 * Nombre de cartes d'un jeu de cartes.
 	 */
-	private static int nbCartes=52;
+	private final static int nbCartes=52;
 
 	
 	/*
@@ -60,6 +60,57 @@ public class Partie {
 	 * Méthodes
 	 */
 	//FIXME  méthodes ?
+	// FIXME (FIXED) compléter le commentaire
+	/**
+	 * Permet de miser un certain nombre de jetons.
+	 */
+	// FIXME (FIXED) respecter les conventions d'écriture
+	public int miser (int mise)
+	{
+		
+		if (c > this.nbJetons)
+			/*Si le joueur tente de miser plus que ce qu'il possède, il est tapis.*/
+			this.nbJetons = 0;
+			this.estTapis = true;
+			//Augmenter le pot !
+		else
+			/*Si le joueur mise moins que son nombre total de jetons, on déduit sa mise de ses jetons.*/
+			this.nbJetons = this.nbJetons - mise;
+			//Augmenter le pot !
+	}
 	
+	// FIXME (FIXED) écrire un commentaire
+	/**
+	 * Permet de relancer un certain nombre de jetons (La relance doit être supérieure à la dernière mise).
+	 * @param c : nombre de jetons.
+	 * @return le nombre de jetons ajouté a la mise.
+	 */
+	// FIXME (FIXED) respecter les conventions d'écriture
+	public int relancer (int c)
+	{
+		
+	}
 	
+	// FIXME (FIXED) écrire un commentaire
+	/**
+	 * Permet de checker.
+	 */
+	// FIXME (FIXED) respecter les conventions d'écriture
+	public checker()
+	{
+		
+	}
+	
+	// FIXME (FIXED) écrire un commentaire
+	// FIXME (FIXED) respecter les conventions d'écriture
+
+	/**
+	 * Permet de se retirer de la manche.
+	 */
+	public coucher()
+	{
+		
+	}
+
+
 }

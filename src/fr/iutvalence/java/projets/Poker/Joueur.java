@@ -23,6 +23,8 @@ public class Joueur {
 	 * Nombre de jetons par défaut.
 	 */
 	public final static int nbJetons_DEFAUT=3000;
+	
+	// FIXME écrire un commentaire
 	private int nbJetons;
 	
 	
@@ -35,7 +37,12 @@ public class Joueur {
 	/**
 	 * Booléen permettant de savoir si le joueur est à tapis ou non.
 	 */
+	// FIXME utiliser le type primitif boolean
 	public Boolean estTapis;
+	
+	
+	// FIXME écrire un commentaire
+	// FIXME utiliser le type primitif boolean
 	public Boolean estTapis_DEFAUT = false;
 	
 	
@@ -72,9 +79,11 @@ public class Joueur {
 	 * Méthodes
 	 */
 	
+	// FIXME compléter le commentaire
 	/**
 	 * 
 	 */
+	// FIXME respecter les conventions d'écriture
 	public int Miser (int mise)
 	{
 		// Si le joueur tente de miser plus que ce qu'il possède, il est tapis.
@@ -87,16 +96,24 @@ public class Joueur {
 			//Augmenter le pot !
 	}
 	
+	// FIXME écrire un commentaire
+	// FIXME respecter les conventions d'écriture
 	public int Relance (int c)
 	{
 		
 	}
 	
+	// FIXME écrire un commentaire
+	// FIXME respecter les conventions d'écriture
+
 	public int Check()
 	{
 		
 	}
 	
+	// FIXME écrire un commentaire
+	// FIXME respecter les conventions d'écriture
+
 	public int Couche()
 	{
 		

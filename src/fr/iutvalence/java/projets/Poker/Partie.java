@@ -15,19 +15,22 @@ public class Partie {
 	/**
 	 * Nombre de joueurs présents dans la partie.
 	 */
+	// FIXME définir une "vraie" constante
 	private int nbJoueurs_DEFAUT = 2;
 	
+	// FIXME compléter le commentaire
 	/**
 	 *  
 	 */
 	private Joueur[] joueurs;
 	
+	// FIXME compléter le commentaire
 	/**
 	 * 
 	 */
 	private Donneur donneur;
 	
-	
+	// FIXME définir une "vraie" constante	
 	/**
 	 * Nombre de cartes d'un jeu de cartes.
 	 */

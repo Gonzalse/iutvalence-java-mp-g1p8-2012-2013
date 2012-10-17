@@ -1,5 +1,6 @@
 package fr.iutvalence.java.projets.Poker;
 
+// FIXME respecter la syntaxe JavaDoc, compléter
 /*
  * @author Hicham & Gonza
  * @version 1 
@@ -11,12 +12,17 @@ public class Carte {
 	 * Attributs
 	 */
 	
+	// FIXME un commentaire par attribut
+	// FIXME ne pas utiliser String pour le type des constantes
     /**
      * Une carte est définie par sa valeur ainsi que sa couleur.
      */
     private String couleur;
 	private String valeur;
 	
+	// FIXME un commentaire par définition
+	// FIXME définir de vraies constantes
+	// FIXME ne pas utiliser String pour le type des constantes
 	/**
 	 * On énumère les 4 couleurs des cartes :
 	 */
@@ -25,6 +31,9 @@ public class Carte {
     private static String COEUR = "COEUR";
     private static String PIQUE = "PIQUE";
 	
+	// FIXME un commentaire par définition
+	// FIXME définir de vraies constantes
+	// FIXME ne pas utiliser String pour le type des constantes
     /**
      * On énumère les différentes valeurs des cartes :
      */

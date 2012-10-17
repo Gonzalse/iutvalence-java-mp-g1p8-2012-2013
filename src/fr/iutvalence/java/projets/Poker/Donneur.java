@@ -27,7 +27,8 @@ public class Donneur {
 		this.nom = "Javier";
 	}
 	
-	
+	// FIXME autre constructeur ?
+	// FIXME méthodes ?
 	/*
 	 * Méthodes
 	 */

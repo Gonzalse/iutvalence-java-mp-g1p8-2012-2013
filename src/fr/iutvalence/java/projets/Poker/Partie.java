@@ -5,38 +5,37 @@ package fr.iutvalence.java.projets.Poker;
  * @version 1 
  */
 
-public class Partie {
-	
+public class Partie
+{
+
 	/*
 	 * Attributs
 	 */
-	
-	
+
 	/**
 	 * Nombre de joueurs présents dans la partie.
 	 */
 	// FIXME (FIXED) définir une "vraie" constante
 	private final static int nbJoueurs_DEFAUT = 2;
-	
+
 	// FIXME (FIXED) compléter le commentaire
 	/**
-	 *  Les joueurs de la partie seront stocké dans un tableau de joueurs.
+	 * Les joueurs de la partie seront stocké dans un tableau de joueurs.
 	 */
 	private Joueur[] joueurs;
-	
+
 	// FIXME (FIXED) compléter le commentaire
 	/**
 	 * La partie contient un donneur chargé de distribuer les cartes.
 	 */
 	private Donneur donneur;
-	
-	// FIXME (FIXED) définir une "vraie" constante	
+
+	// FIXME (FIXED) définir une "vraie" constante
 	/**
 	 * Nombre de cartes d'un jeu de cartes.
 	 */
-	private final static int nbCartes=52;
+	private final static int nbCartes = 52;
 
-	
 	/*
 	 * Constructeurs
 	 */
@@ -54,12 +53,11 @@ public class Partie {
 		//Initialisation des cartes :
 		this.
 	}
-	
-	
+
 	/*
 	 * Méthodes
 	 */
-	//FIXME  méthodes ?
+	// FIXME méthodes ?
 	// FIXME (FIXED) compléter le commentaire
 	/**
 	 * Permet de miser un certain nombre de jetons.
@@ -78,19 +76,21 @@ public class Partie {
 			this.nbJetons = this.nbJetons - mise;
 			//Augmenter le pot !
 	}
-	
+
 	// FIXME (FIXED) écrire un commentaire
 	/**
 	 * Permet de relancer un certain nombre de jetons (La relance doit être supérieure à la dernière mise).
-	 * @param c : nombre de jetons.
+	 * 
+	 * @param c
+	 *            : nombre de jetons.
 	 * @return le nombre de jetons ajouté a la mise.
 	 */
 	// FIXME (FIXED) respecter les conventions d'écriture
-	public int relancer (int c)
+	public int relancer(int c)
 	{
-		
+
 	}
-	
+
 	// FIXME (FIXED) écrire un commentaire
 	/**
 	 * Permet de checker.
@@ -98,9 +98,9 @@ public class Partie {
 	// FIXME (FIXED) respecter les conventions d'écriture
 	public checker()
 	{
-		
+
 	}
-	
+
 	// FIXME (FIXED) écrire un commentaire
 	// FIXME (FIXED) respecter les conventions d'écriture
 
@@ -109,8 +109,7 @@ public class Partie {
 	 */
 	public coucher()
 	{
-		
-	}
 
+	}
 
 }

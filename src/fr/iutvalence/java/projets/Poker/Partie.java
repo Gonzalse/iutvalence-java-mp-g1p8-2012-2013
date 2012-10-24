@@ -13,11 +13,11 @@ public class Partie
 	 */
 	private final static int nbCartes = 52;
 
-	// FIXME respecter les conventions d'écriture
+	// FIXME (FIXED) respecter les conventions d'écriture
 	/**
 	 * Nombre de joueurs présents dans la partie.
 	 */
-	private final static int nbJoueurs_DEFAUT = 2;
+	private final static int NBJOUEURS_DEFAUT = 2;
 
 	/*
 	 * Attributs
@@ -41,7 +41,7 @@ public class Partie
 	{
 		//Initialisation du nombre de joueur :
 		if ((nbJoueur < 2) || (nbJoueur > 6))
-			this.joueurs = new Joueur[nbJoueurs_DEFAUT];
+			this.joueurs = new Joueur[NBJOUEURS_DEFAUT];
 		else
 			this.joueurs = new Joueur[nbJoueur];
 		

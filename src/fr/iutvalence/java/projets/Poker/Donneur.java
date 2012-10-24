@@ -1,8 +1,10 @@
 package fr.iutvalence.java.projets.Poker;
-//FIXME respecter la syntaxe JavaDoc, compléter
-/*
- * @author Hicham & Gonza
- * @version 1 
+//FIXME (FIXED) respecter la syntaxe JavaDoc, compléter
+/**
+ * <p>Titre : Donneur</p>
+ * <p>Description : classe permettant de définir un donneur</p>
+ * @author Gonzalez Aftiss
+ * @version 1.0
  */
 
 public class Donneur

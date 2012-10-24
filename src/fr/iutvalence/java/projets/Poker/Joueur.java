@@ -1,8 +1,10 @@
 package fr.iutvalence.java.projets.Poker;
-//FIXME respecter la syntaxe JavaDoc, compléter
-/*
- * @author Hicham & Gonza
- * @version 1 
+//FIXME (FIXED) respecter la syntaxe JavaDoc, compléter
+/**
+ * <p>Titre : Joueur</p>
+ * <p>Description : classe permettant de définir un joueur </p>
+ * @author Gonzalez Aftiss
+ * @version 1.0
  */
 
 public class Joueur
@@ -10,14 +12,14 @@ public class Joueur
 	/**
 	 * Nombre de jetons par défaut.
 	 */
-	public final static int nbJetons_DEFAUT = 3000;
+	public final static int NBJETONS_DEFAUT = 3000;
 
 	/**
 	 * Booléen qui a pour valeur faux et qui permet d'initialiser le joueur a "non tapis".
 	 */
-	// FIXME définir comme une constante
-	// FIXME respecter les conventions d'écriture
-	public boolean estTapis_DEFAUT = false;
+	// FIXME (FIXED) définir comme une constante
+	// FIXME (FIXED) respecter les conventions d'écriture
+	public final static boolean TAPIS_DEFAUT= false;
 
 	/*
 	 * Attributs
@@ -34,17 +36,17 @@ public class Joueur
 	 */
 	private int nbJetons;
 
-	// FIXME définir en private
+	// FIXME (FIXED) définir en private
 	/**
 	 * Main du joueur composée de 2 cartes.
 	 */
-	public Carte[] main;
+	private Carte[] main;
 
 	/**
 	 * Booléen permettant de savoir si le joueur est à tapis ou non.
 	 */
-	// FIXME définir en private
-	public boolean estTapis;
+	// FIXME (FIXED) définir en private
+	private boolean estTapis;
 	
 	/*
 	 * Constructeurs
@@ -67,7 +69,7 @@ public class Joueur
 
 		// Initialisation du nombre de jetons :
 		if ((nbJetons < 500) || (nbJetons > 10000))
-			this.nbJetons = nbJetons_DEFAUT;
+			this.nbJetons = NBJETONS_DEFAUT;
 		else
 			this.nbJetons = jetons;
 
@@ -75,9 +77,58 @@ public class Joueur
 		this.main = new Carte[1];
 	}
 
-	// FIXME Méthodes ?
+	// FIXME (FIXED) Méthodes ?
 	/*
 	 * Méthodes
 	 */
-
+	
+	/**
+	 * Permet d'obtenir le nombre de jeton du joueur.
+	 * @return le nombre de jetons du joueur.
+	 */
+	public int getNbJetons()
+	{
+		return this.nbJetons;
+	}
+	
+	
+	/**
+	 * Permet d'attribuer un nombre de jetons à un joueur.
+	 * @param jeton : le nombre de jetons à attribuer.
+	 */
+	public void setNbJetons(int jetons)
+	{
+		this.nbJetons = jetons;
+	}
+	
+	
+	/**
+	 * Permet d'obtenir le nom d'un joueur.
+	 * @return le nom du joueur.
+	 */
+	public String getNomJoueur()
+	{
+		return this.nom;
+	}
+	
+	
+	/**
+	 * Permet d'attribuer un nom à un joueur.
+	 * @param nom : le nom à attribuer au joueur.
+	 */
+	public void setNomJoueur(String nom)
+	{
+		this.nom = nom;
+	}
+	
+	
+	/**
+	 * Permet de changer les cartes en main d'un joueur.
+	 */
+	public void newCarte()
+	{
+		this.main = new Carte[1];
+	}
+	
+	
 }

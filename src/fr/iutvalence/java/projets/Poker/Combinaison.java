@@ -1,5 +1,6 @@
 package fr.iutvalence.java.projets.Poker;
 
+//FIXME respecter la syntaxe JavaDoc, compléter
 /*
  * @author Hicham & Gonza
  * @version 1 
@@ -15,9 +16,7 @@ public class Combinaison {
 	 * Attributs
 	 */
 	
-	/**
-	 * Hiérarchie des combinaisons de cartes au poker :
-	 */
+	// FIXME respecter les conventions d'écriture pour les contantes
 	private final static int hauteur = 1;
 	private final static int paire = 2;
 	private final static int doublepaires = 3;

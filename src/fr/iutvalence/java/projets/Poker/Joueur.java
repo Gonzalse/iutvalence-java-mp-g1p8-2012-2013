@@ -1,5 +1,5 @@
 package fr.iutvalence.java.projets.Poker;
-
+//FIXME respecter la syntaxe JavaDoc, compléter
 /*
  * @author Hicham & Gonza
  * @version 1 
@@ -7,6 +7,17 @@ package fr.iutvalence.java.projets.Poker;
 
 public class Joueur
 {
+	/**
+	 * Nombre de jetons par défaut.
+	 */
+	public final static int nbJetons_DEFAUT = 3000;
+
+	/**
+	 * Booléen qui a pour valeur faux et qui permet d'initialiser le joueur a "non tapis".
+	 */
+	// FIXME définir comme une constante
+	// FIXME respecter les conventions d'écriture
+	public boolean estTapis_DEFAUT = false;
 
 	/*
 	 * Attributs
@@ -17,17 +28,13 @@ public class Joueur
 	 */
 	private String nom;
 
-	/**
-	 * Nombre de jetons par défaut.
-	 */
-	public final static int nbJetons_DEFAUT = 3000;
-
-	// FIXME (FIXED) écrire un commentaire
+	
 	/**
 	 * Un joueur possède un nombre de jetons.
 	 */
 	private int nbJetons;
 
+	// FIXME définir en private
 	/**
 	 * Main du joueur composée de 2 cartes.
 	 */
@@ -36,16 +43,9 @@ public class Joueur
 	/**
 	 * Booléen permettant de savoir si le joueur est à tapis ou non.
 	 */
-	// FIXME (FIXED) utiliser le type primitif boolean
+	// FIXME définir en private
 	public boolean estTapis;
-
-	// FIXME (FIXED) écrire un commentaire
-	/**
-	 * Booléen qui a pour valeur faux et qui permet d'initialiser le joueur a "non tapis".
-	 */
-	// FIXME (FIXED)utiliser le type primitif boolean
-	public boolean estTapis_DEFAUT = false;
-
+	
 	/*
 	 * Constructeurs
 	 */

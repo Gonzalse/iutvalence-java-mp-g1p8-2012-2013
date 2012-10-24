@@ -8,13 +8,6 @@ package fr.iutvalence.java.projets.Poker;
 
 public class Carte
 {
-
-	/*
-	 * Attributs
-	 */
-
-	// FIXME (FIXED) un commentaire par attribut
-	// FIXME (FIXED) ne pas utiliser String pour le type des constantes
 	/**
 	 * Une carte est définie par sa valeur.
 	 */
@@ -25,9 +18,7 @@ public class Carte
 	 */
 	private int couleur;
 
-	// FIXME (FIXED) un commentaire par définition
-	// FIXME (FIXED) définir de vraies constantes
-	// FIXME (FIXED) ne pas utiliser String pour le type des constantes
+	// FIXME redéfinir les 4 constantes via une énumération (à discuter)
 	/**
 	 * On définit la couleur carreau en lui associant l'entier 0.
 	 */
@@ -48,9 +39,8 @@ public class Carte
 	 */
 	private final static int PIQUE = 3;
 
-	// FIXME (FIXED)un commentaire par définition
-	// FIXME (FIXED) définir de vraies constantes
-	// FIXME (FIXED) ne pas utiliser String pour le type des constantes
+	
+	// FIXME redéfinir les constantes suivantes via une énumération
 	/**
 	 * On définit la valeur deux en lui associant l'entier 2.
 	 */
@@ -116,38 +106,39 @@ public class Carte
 	 */
 	private final static int AS = 14;
 
-	/*
-	 * Constructeurs
-	 */
-
+	
+	// FIXME écrire un commentaire
 	public Carte(couleur c, valeur v)
 	{
 		this.valeur = v;
 		this.couleur = c;
 	}
 
-	/*
-	 * Méthodes
-	 */
-
+	// FIXME écrire un commentaire
 	public String getValeur()
 	{
 		return this.valeur;
 	}
 
+	// FIXME écrire un commentaire
 	public String getCouleur()
 	{
 		return this.couleur;
 	}
 
+	// FIXME écrire un commentaire
 	public void setValeur(String c)
 	{
 		this.valeur = c;
 	}
 
+	// FIXME écrire un commentaire
 	public void setCouleur(String c)
 	{
 		this.couleur = c;
 	}
+
+	// FIXME redéfinir equals et hashCode
+	// FIXME redéfinir toString
 
 }

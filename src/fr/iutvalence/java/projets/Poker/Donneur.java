@@ -1,5 +1,5 @@
 package fr.iutvalence.java.projets.Poker;
-
+//FIXME respecter la syntaxe JavaDoc, compléter
 /*
  * @author Hicham & Gonza
  * @version 1 
@@ -8,6 +8,12 @@ package fr.iutvalence.java.projets.Poker;
 public class Donneur
 {
 
+	/**
+	 * Le nom du donneur par défaut est Javier.
+	 */
+	private final static String nom_DEFAUT = "Javier";
+
+	
 	/*
 	 * Attributs
 	 */
@@ -17,11 +23,7 @@ public class Donneur
 	 */
 	private final String nomDonneur;
 
-	/**
-	 * Le nom du donneur par défaut est Javier.
-	 */
-	private final static String nom_DEFAUT = "Javier";
-
+	
 	/*
 	 * Constructeurs
 	 */
@@ -34,7 +36,6 @@ public class Donneur
 		this.nomDonneur = nom_DEFAUT;
 	}
 
-	// FIXME (FIXED) autre constructeur ?
 	/**
 	 * Le donneur prend le nom placé en paramètre.
 	 * 
@@ -46,7 +47,6 @@ public class Donneur
 		this.nomDonneur = choixNom;
 	}
 
-	// FIXME (FIXED) méthodes ?
 	/*
 	 * Méthodes
 	 */

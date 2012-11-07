@@ -3,7 +3,7 @@ package fr.iutvalence.java.projets.Poker;
 // FIXME (FIXED) respecter la syntaxe JavaDoc, compléter
 /**
  * <p>Titre : Carte</p>
- * <p>Description : classe permettant de définir une carte</p>
+ * <p>Description : classe permettant de définir une carte.</p>
  * @author Gonzalez Aftiss
  * @version 1.0
  */
@@ -76,8 +76,8 @@ public class Carte
 	}
 
 
-	// FIXME redéfinir equals et hashCode
-	// FIXME redéfinir toString
+	// FIXME (FIXED) redéfinir equals et hashCode
+	// FIXME (FIXED) redéfinir toString
 	/**
 	 * Permet de comparer deux cartes.
 	 * @param c : la carte que l'on veut comparer.
@@ -91,6 +91,11 @@ public class Carte
 	public int hashCode ()
 	{
 		return this.valeur.hashCode()+this.couleur.hashCode();
+	}
+	
+	public String toString()
+	{
+		return "Valeur : " + this.valeur + " Couleur : " + this.couleur;
 	}
 
 }

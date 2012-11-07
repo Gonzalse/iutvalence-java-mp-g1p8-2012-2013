@@ -1,11 +1,17 @@
 package fr.iutvalence.java.projets.Poker;
 
 /**
- * @author Aftiss - Gonza
+ * <p>Titre : Pot</p>
+ * <p>Description : Gestion du nombre de jetons d'un pot.</p>
+ * @author Gonzalez Aftiss
+ * @version 1.0
  */
 
 public class Pot
 {
+	/*
+	 * Attributs
+	 */
 
 	/**
 	 * Au début de chaque manche, la valeur du pot est de 0.
@@ -13,9 +19,6 @@ public class Pot
 	// FIXME (FIXED) respecter les conventions d'écriture
 	public final static int POT_DEFAUT = 0;
 
-	/*
-	 * Attributs
-	 */
 
 	/**
 	 * Le pot représente le nombre de jetons misés au cours d'une manche.

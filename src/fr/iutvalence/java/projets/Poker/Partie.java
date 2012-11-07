@@ -1,27 +1,30 @@
 package fr.iutvalence.java.projets.Poker;
 
-/*
- * @author Hicham & Gonza
- * @version 1 
+/**
+ * <p>Titre : Partie</p>
+ * <p>Description : Gestion de la partie.</p>
+ * @author Gonzalez Aftiss
+ * @version 1.0
  */
 
 public class Partie
 {
-
+	/*
+	 * Attributs
+	 */
+	
 	/**
 	 * Nombre de cartes d'un jeu de cartes.
 	 */
 	private final static int nbCartes = 52;
 
+	
 	// FIXME (FIXED) respecter les conventions d'écriture
 	/**
 	 * Nombre de joueurs présents dans la partie.
 	 */
 	private final static int NBJOUEURS_DEFAUT = 2;
 
-	/*
-	 * Attributs
-	 */
 
 	/**
 	 * Les joueurs de la partie seront stocké dans un tableau de joueurs.
@@ -56,11 +59,14 @@ public class Partie
 	 * Méthodes
 	 */
 	
+	
+	
+	
 	/**
 	 * Permet de miser un certain nombre de jetons.
 	 */
 
-	public int miser (int mise)
+	public int miser (Joueur j, int mise)
 	{
 		
 		if (c > this.nbJetons)
@@ -77,8 +83,7 @@ public class Partie
 	/**
 	 * Permet de relancer un certain nombre de jetons (La relance doit être supérieure à la dernière mise).
 	 * 
-	 * @param c
-	 *            : nombre de jetons.
+	 * @param c : nombre de jetons.
 	 * @return le nombre de jetons ajouté a la mise.
 	 */
 	public int relancer(int c)

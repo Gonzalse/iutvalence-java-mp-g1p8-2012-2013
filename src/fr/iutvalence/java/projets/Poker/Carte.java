@@ -1,6 +1,5 @@
 package fr.iutvalence.java.projets.Poker;
 
-// FIXME (FIXED) respecter la syntaxe JavaDoc, compléter
 /**
  * <p>Titre : Carte</p>
  * <p>Description : classe permettant de définir une carte.</p>
@@ -20,10 +19,8 @@ public class Carte
 	 */
 	private Couleur couleur;
 	
-	// FIXME (FIXED) redéfinir les 4 constantes via une énumération (à discuter)
 
 	
-	// FIXME (FIXED) écrire un commentaire
 	/**
 	 * Permet de créer une carte en indiquant sa couleur et sa valeur.
 	 * @param c : couleur de la carte.
@@ -35,7 +32,6 @@ public class Carte
 		this.couleur = c;
 	}
 
-	// FIXME (FIXED) écrire un commentaire
 	/**
 	 * Permet d'obtenir la valeur d'une carte.
 	 * @return la valeur de la carte.
@@ -45,7 +41,6 @@ public class Carte
 		return this.valeur;
 	}
 
-	// FIXME (FIXED) écrire un commentaire
 	/**
 	 * Permet d'obtenir la couleur d'une carte.
 	 * @return la couleur de la carte.
@@ -55,7 +50,6 @@ public class Carte
 		return this.couleur;
 	}
 
-	// FIXME (FIXED) écrire un commentaire
 	/**
 	 * Permet d'attribuer une valeur à une carte.
 	 * @param c : valeur que l'on veut donner à la carte.
@@ -65,7 +59,6 @@ public class Carte
 		this.valeur = v;
 	}
 
-	// FIXME (FIXED) écrire un commentaire
 	/**
 	 * Permet d'attribuer une couleur à une carte. 
 	 * @param c : couleur que l'on veut donner à la carte.
@@ -75,9 +68,6 @@ public class Carte
 		this.couleur = c;
 	}
 
-
-	// FIXME (FIXED) redéfinir equals et hashCode
-	// FIXME (FIXED) redéfinir toString
 	/**
 	 * Permet de comparer deux cartes.
 	 * @param c : la carte que l'on veut comparer.
@@ -88,11 +78,17 @@ public class Carte
 		return ((this.valeur == c.getValeur()) && (this.couleur == c.getCouleur()));
 	}
 	
+	/**
+	 * @see java.lang.Object#hashCode()
+	 */
 	public int hashCode ()
 	{
 		return this.valeur.hashCode()+this.couleur.hashCode();
 	}
 	
+	/**
+	 * @see java.lang.Object#toString()
+	 */
 	public String toString()
 	{
 		return "Valeur : " + this.valeur + " Couleur : " + this.couleur;

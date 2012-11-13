@@ -1,5 +1,4 @@
 package fr.iutvalence.java.projets.Poker;
-//FIXME (FIXED) respecter la syntaxe JavaDoc, compléter
 /**
  * <p>Titre : Donneur</p>
  * <p>Description : classe permettant de définir un donneur</p>
@@ -56,6 +55,7 @@ public class Donneur
 	/**
 	 * Renvoi le nom du donneur.
 	 */
+	// FIXME compléter le commentaire
 	public String getNom()
 	{
 		return this.nomDonneur;

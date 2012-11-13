@@ -1,5 +1,4 @@
 package fr.iutvalence.java.projets.Poker;
-//FIXME (FIXED) respecter la syntaxe JavaDoc, compléter
 /**
  * <p>Titre : Joueur</p>
  * <p>Description : classe permettant de définir un joueur </p>
@@ -17,8 +16,6 @@ public class Joueur
 	/**
 	 * Booléen qui a pour valeur faux et qui permet d'initialiser le joueur a "non tapis".
 	 */
-	// FIXME (FIXED) définir comme une constante
-	// FIXME (FIXED) respecter les conventions d'écriture
 	public final static boolean TAPIS_DEFAUT= false;
 
 	/*
@@ -36,7 +33,6 @@ public class Joueur
 	 */
 	private int nbJetons;
 
-	// FIXME (FIXED) définir en private
 	/**
 	 * Main du joueur composée de 2 cartes.
 	 */
@@ -45,7 +41,6 @@ public class Joueur
 	/**
 	 * Booléen permettant de savoir si le joueur est à tapis ou non.
 	 */
-	// FIXME (FIXED) définir en private
 	private boolean estTapis;
 	
 	/*
@@ -77,7 +72,6 @@ public class Joueur
 		this.main = new Carte[1];
 	}
 
-	// FIXME (FIXED) Méthodes ?
 	/*
 	 * Méthodes
 	 */
@@ -94,7 +88,7 @@ public class Joueur
 	
 	/**
 	 * Permet d'attribuer un nombre de jetons à un joueur.
-	 * @param jeton : le nombre de jetons à attribuer.
+	 * @param jetons : le nombre de jetons à attribuer.
 	 */
 	public void setNbJetons(int jetons)
 	{

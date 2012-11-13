@@ -16,7 +16,6 @@ public class Pot
 	/**
 	 * Au début de chaque manche, la valeur du pot est de 0.
 	 */
-	// FIXME (FIXED) respecter les conventions d'écriture
 	public final static int POT_DEFAUT = 0;
 
 

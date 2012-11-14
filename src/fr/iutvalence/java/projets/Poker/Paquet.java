@@ -20,6 +20,14 @@ public class Paquet
 	 */
 	private Carte[] PaquetDeCarte = new Carte[52];
 	
+	// TODO Mettre un com'
+	/**
+	 *
+	 */
+	private boolean[] CartePrésentes = new boolean[52];
+			
+	//NbCartesPaquet
+	
 	
 	
 	/*
@@ -53,7 +61,7 @@ public class Paquet
 	 * @param indice : Un indice du tableau paquetDeCarte.
 	 * @return : Une Carte.
 	 */
-	public Carte getCarte(int indice)
+	public Carte getCarte()
 	{
 		return (this.PaquetDeCarte[indice]);
 	}

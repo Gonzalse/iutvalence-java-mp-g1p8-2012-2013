@@ -16,8 +16,7 @@ public class Main
 	 */
 	public static void main(String[] args)
 	{
-		Partie Poker = new Partie(2, 2000);
-		Poker.
+		Partie poker = new Partie();
 		
 	}
 	/*	Carte C = new Carte(Couleur.TREFLE,Valeur.TROIS);

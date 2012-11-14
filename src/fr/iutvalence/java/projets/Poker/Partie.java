@@ -17,18 +17,21 @@ public class Partie
 	 * Nombre de cartes d'un jeu de cartes.
 	 */
 	private final static int nbCartes = 52;
-
 	
 	/**
-	 * Nombre de joueurs présents dans la partie.
+	 * Nombre de joueurs maximum dans la partie.
 	 */
-	private final static int NB_JOUEURS_DEFAUT = 2;
-
+	private final static int NB_JOUEURS_MAX = 6;
 
 	/**
 	 * Les joueurs de la partie seront stocké dans un tableau de joueurs.
 	 */
 	private Joueur[] joueurs;
+	
+	/**
+	 * Nombre de joueurs présents dans la partie.
+	 */
+	private int nbJoueurs;
 
 	/**
 	 * La partie contient un donneur chargé de distribuer les cartes.
@@ -36,74 +39,59 @@ public class Partie
 	private Donneur donneur;
 
 
+	
 	/*
 	 * Constructeurs
 	 */
-	public Partie (int nbJoueur, int nbJetons)
+	
+	/**
+	 * Initialise la partie de poker.
+	 */
+	
+	public Partie ()
 	{
+		//Initialisation du tableau de joueur :
+		this.joueurs = new Joueur[NB_JOUEURS_MAX];
+		
 		//Initialisation du nombre de joueur :
-		if ((nbJoueur < 2) || (nbJoueur > 6))
-			this.joueurs = new Joueur[NB_JOUEURS_DEFAUT];
-		else
-			this.joueurs = new Joueur[nbJoueur];
+		this.nbJoueurs = 0;
 		
 		//Initialisation du donneur :
 		this.donneur = new Donneur();
-		
-		//Initialisation des cartes :
-
 	}
 
 	/*
 	 * Méthodes
 	 */
 	
-	
-	
-	
 	/**
-	 * Permet de miser un certain nombre de jetons.
+	 * Permet d'ajouter un joueur dans la partie.
+	 * @param j : Le joueur à rajouter dans la partie.
 	 */
-
-	public int miser (Joueur j, int mise)
+	void addJoueur (Joueur j)
 	{
-		
-		if (c > this.nbJetons)
-			/*Si le joueur tente de miser plus que ce qu'il possède, il est tapis.*/
-			this.nbJetons = 0;
-			this.estTapis = true;
-			//Augmenter le pot !
+		if (this.nbJoueurs < NB_JOUEURS_MAX)
+		{
+			this.joueurs[this.nbJoueurs] = j;
+			this.nbJoueurs++;
+		}
 		else
-			/*Si le joueur mise moins que son nombre total de jetons, on déduit sa mise de ses jetons.*/
-			this.nbJetons = this.nbJetons - mise;
-			//Augmenter le pot !
+		{
+			// TODO Message !
+		}
 	}
-
-	/**
-	 * Permet de relancer un certain nombre de jetons (La relance doit être supérieure à la dernière mise).
-	 * 
-	 * @param c : nombre de jetons.
-	 * @return le nombre de jetons ajouté a la mise.
-	 */
-	public int relancer(int c)
+	
+	// TODO Décomposer en nombre de tour, etc.
+	void demarrer()
 	{
-
+		if (this.nbJoueurs < 2)
+		{
+			// TODO Erreur nombre de joueur
+		}
+		else
+		{
+			
+		}
+		
 	}
-
-	/**
-	 * Permet de checker.
-	 */
-	public checker()
-	{
-
-	}
-
-	/**
-	 * Permet de se retirer de la manche.
-	 */
-	public coucher()
-	{
-
-	}
-
 }

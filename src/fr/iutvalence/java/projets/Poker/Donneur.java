@@ -54,8 +54,9 @@ public class Donneur
 
 	/**
 	 * Renvoi le nom du donneur.
+	 * @return Le nom du donneur.
 	 */
-	// FIXME compléter le commentaire
+	// FIXME (FIXED) compléter le commentaire
 	public String getNom()
 	{
 		return this.nomDonneur;

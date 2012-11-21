@@ -1,11 +1,8 @@
 package Main;
 
-import fr.iutvalence.java.projets.Poker.Carte;
-import fr.iutvalence.java.projets.Poker.Couleur;
-import fr.iutvalence.java.projets.Poker.Paquet;
-import fr.iutvalence.java.projets.Poker.Partie;
-import fr.iutvalence.java.projets.Poker.Pot;
-import fr.iutvalence.java.projets.Poker.Valeur;
+import java.util.Scanner;
+
+import fr.iutvalence.java.projets.Poker.*;
 
 
 public class Main
@@ -16,8 +13,39 @@ public class Main
 	 */
 	public static void main(String[] args)
 	{
-		Partie poker = new Partie();
+		Partie Poker = new Partie();
+		Paquet p = new Paquet();
 		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Veuillez saisir un nom :");
+		String str = sc.nextLine();
+
+		Joueur j1 = new Joueur(str);
+		Joueur j2 = new Joueur("Hicham");
+		Poker.addJoueur(j1);
+		Poker.addJoueur(j2);
+		System.out.println("Le joueur " + j1.getNom() + " possède " + j1.getNbJetons() + " jetons. ");
+		System.out.println("Le joueur " + j2.getNom() + " possède " + j2.getNbJetons() + " jetons. ");
+		
+		
+
+		
+		}
+		
+		for (int i = 0; i < 51; i++)
+		{
+		try
+		{
+			{
+				Carte a = p.getCarte();
+				System.out.println(a);
+			}
+		catch (PlusDeCarteException e) {
+		    System.out.println("Toutes les cartes ont été tirées !");
+			
+		}
+	
+
 	}
 	/*	Carte C = new Carte(Couleur.TREFLE,Valeur.TROIS);
 		Carte D = new Carte(Couleur.CARREAU,Valeur.DAME);

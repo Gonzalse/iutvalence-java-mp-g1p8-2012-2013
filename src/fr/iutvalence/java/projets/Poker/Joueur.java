@@ -68,6 +68,16 @@ public class Joueur
 	private final static int NBJETONSMISES_DEFAUT = 0;
 	
 	/**
+	 * Par défaut le joueur n'a pas perdu lorsqu'il rejoint la partie.
+	 */
+	private final static boolean A_PERDU_DEFAUT = false;
+	
+	/**
+	 * Booléen indiquant si un joueur a perdu ou non la partie.
+	 */
+	private boolean a_perdu;
+	
+	/**
 	 * Définit le nombre de jetons qu'a misé un joueur au cours d'un tour.
 	 */
 	private int nbJetonsMisés;
@@ -104,10 +114,8 @@ public class Joueur
 	 * 
 	 * @param nomJoueur
 	 *            : nom du joueur
-	 * @param mainJoueur
-	 *            : main (2 cartes) du joueur.
 	 */
-	public Joueur(String nomJoueur, Carte[] mainJoueur)
+	public Joueur(String nomJoueur)
 	{
 		// Initialisation du nom du joueur :
 		this.nom = nomJoueur;
@@ -118,16 +126,26 @@ public class Joueur
 		// Initialisation de la main du joueur
 		this.main = new Carte[1];
 		
-		// Initialisation des booléens du joueur à non tapis, non couché et non check.
+		// Initialisation des booléens du joueur à non tapis, non couché non check et non perdu.
 		this.estCouché = COUCHE_DEFAUT;
 		this.estTapis = TAPIS_DEFAUT;
 		this.check = CHECK_DEFAUT;
 		this.nbJetonsMisés = NBJETONSMISES_DEFAUT;
+		this.a_perdu = A_PERDU_DEFAUT;
 	}
 
 	/*
 	 * Méthodes
 	 */
+	
+	/**
+	 * Permet d'obtenir le nombre de jeton du joueur.
+	 * @return le nombre de jetons du joueur.
+	 */
+	public String getNom()
+	{
+		return this.nom;
+	}
 	
 	/**
 	 * Permet d'obtenir le nombre de jeton du joueur.
@@ -170,12 +188,15 @@ public class Joueur
 	
 	
 	/**
-	 * Permet de changer les cartes en main d'un joueur.
+	 * Permet d'obtenir les carte en main du joueur.
+	 * @return Les cartes en mains du joueur.
 	 */
-	public void newCarte()
+	public Carte[] getCarte()
 	{
-		this.main = new Carte[1];
+		return (this.main);
 	}
+	
+	
 	
 	
 	/**
@@ -203,9 +224,7 @@ public class Joueur
 
 	/**
 	 * Permet de relancer un certain nombre de jetons (La relance doit être supérieure à la dernière mise).
-	 * 
 	 * @param c : nombre de jetons.
-	 * @return le nombre de jetons ajouté a la mise.
 	 */
 	public void relancer(int c)
 	{

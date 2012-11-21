@@ -1,5 +1,7 @@
 package fr.iutvalence.java.projets.Poker;
 
+import java.util.Random;
+
 import fr.iutvalence.java.projets.Poker.Carte;
 
 /**
@@ -11,6 +13,9 @@ import fr.iutvalence.java.projets.Poker.Carte;
 
 public class Paquet
 {
+	
+	
+	public class PlusDeCarteException extends Exception {}
 	/*
 	 * Attributs
 	 */
@@ -25,6 +30,16 @@ public class Paquet
 	 *
 	 */
 	private boolean[] CartePrésentes = new boolean[52];
+	
+	/**
+	 * Représente le nombre de cartes qui ont été tirées du paquet.
+	 */
+	private int CartesTirées;
+	
+	/**
+	 * A la création du paquet, toute les cartes sont présentes.
+	 */
+	private final static int CartesTirées_DEFAUT = 0; 
 			
 	//NbCartesPaquet
 	
@@ -39,6 +54,7 @@ public class Paquet
 	 */
 	public Paquet()
 	{
+		this.CartesTirées = this.CartesTirées_DEFAUT;
 		int indiceTableau = 0;
 		
 		for(int i = 0; i <= 3; i++)
@@ -49,6 +65,11 @@ public class Paquet
 			}
 			
 		}
+		
+		for (int i = 0; i <= 51; i++)
+		{
+			this.CartePrésentes[i] = true;
+		}
 	}
 	
 	
@@ -58,11 +79,27 @@ public class Paquet
 	 */
 	
 	/**
-	 * @param indice : Un indice du tableau paquetDeCarte.
+	 * Retourne une carte aléatoire dans le tableau, et met a jour le tableau de booléen.
 	 * @return : Une Carte.
 	 */
-	public Carte getCarte()
+	public Carte getCarte() throws PlusDeCarteException;
 	{
-		return (this.PaquetDeCarte[indice]);
+		if (this.CartesTirées < 52)
+		{
+			int valeur;
+			
+			do {
+				Random r = new Random();
+				valeur = r.nextInt(52);
+			} while (this.CartePrésentes[valeur] == false);
+			
+			this.CartePrésentes[valeur] = false;
+			
+			return (this.PaquetDeCarte[valeur]);
+		}
+		else
+		{
+			throws new PlusDeCarteException();
+		}
 	}
 }

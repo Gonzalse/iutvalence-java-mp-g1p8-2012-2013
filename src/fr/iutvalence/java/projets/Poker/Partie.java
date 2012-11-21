@@ -66,9 +66,9 @@ public class Partie
 	
 	/**
 	 * Permet d'ajouter un joueur dans la partie.
-	 * @param j : Le joueur à rajouter dans la partie.
+	 * @param j : Le nom du joueur à rajouter dans la partie.
 	 */
-	void addJoueur (Joueur j)
+	public void addJoueur (Joueur j)
 	{
 		if (this.nbJoueurs < NB_JOUEURS_MAX)
 		{

@@ -9,6 +9,11 @@ package fr.iutvalence.java.projets.Poker;
 
 public class Carte
 {
+	
+	/*
+	 * Attributs
+	 */
+	
 	/**
 	 * Une carte est définie par sa valeur.
 	 */
@@ -21,6 +26,10 @@ public class Carte
 	
 
 	
+	/*
+	 * Constructeurs
+	 */
+	
 	/**
 	 * Permet de créer une carte en indiquant sa couleur et sa valeur.
 	 * @param c : couleur de la carte.
@@ -32,6 +41,12 @@ public class Carte
 		this.couleur = c;
 	}
 
+	
+	
+	/*
+	 * Méthodes
+	 */
+	
 	/**
 	 * Permet d'obtenir la valeur d'une carte.
 	 * @return la valeur de la carte.

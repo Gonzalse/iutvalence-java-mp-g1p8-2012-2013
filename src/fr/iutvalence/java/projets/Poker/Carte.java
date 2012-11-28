@@ -17,12 +17,12 @@ public class Carte
 	/**
 	 * Une carte est définie par sa valeur.
 	 */
-	private Valeur valeur;
+	private final Valeur valeur;
 
 	/**
 	 * Une carte est aussi définie par sa couleur.
 	 */
-	private Couleur couleur;
+	private final Couleur couleur;
 	
 
 	
@@ -65,30 +65,13 @@ public class Carte
 		return this.couleur;
 	}
 
-	/**
-	 * Permet d'attribuer une valeur à une carte.
-	 * @param c : valeur que l'on veut donner à la carte.
-	 */
-	public void setValeur(Valeur v)
-	{
-		this.valeur = v;
-	}
-
-	/**
-	 * Permet d'attribuer une couleur à une carte. 
-	 * @param c : couleur que l'on veut donner à la carte.
-	 */
-	public void setCouleur(Couleur c)
-	{
-		this.couleur = c;
-	}
 
 	/**
 	 * Permet de comparer deux cartes.
 	 * @param c : la carte que l'on veut comparer.
 	 * @return vrai si la carte et celle placée en paramètre sont identiques, sinon faux.
 	 */
-	public boolean equals (Carte c)
+	public boolean equals (Object c)
 	{
 		return ((this.valeur == c.getValeur()) && (this.couleur == c.getCouleur()));
 	}

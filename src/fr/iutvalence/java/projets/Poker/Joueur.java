@@ -1,4 +1,5 @@
 package fr.iutvalence.java.projets.Poker;
+
 /**
  * <p>Titre : Joueur</p>
  * <p>Description : classe permettant de définir un joueur </p>
@@ -200,35 +201,48 @@ public class Joueur
 	
 	
 	/**
-	 * Permet de miser un certain nombre de jetons.
-	 * @param j 
+	 * Permet à un joueur de miser un certain nombre de jetons.
 	 * @param mise : nombre de jetons que le joueur veut miser.
 	 */
 
-	public miser (Joueur j, int mise)
+	public void miser (int mise) //TODO Void ou autre ?
 	{
 		
 		
 		if (mise > this.nbJetons)
+		{
 			/*Si le joueur tente de miser plus que ce qu'il possède, il est tapis.*/
 			this.nbJetonsMisés += this.nbJetons;
 			this.nbJetons = 0;
 			this.estTapis = true;
-			//Augmenter le pot !
+		}
 		else
+		{
 			/*Si le joueur mise moins que son nombre total de jetons, on déduit sa mise de ses jetons.*/
 			this.nbJetonsMisés += mise;
 			this.nbJetons = this.nbJetons - mise;
-			//Augmenter le pot !
+		}
 	}
 
 	/**
 	 * Permet de relancer un certain nombre de jetons (La relance doit être supérieure à la dernière mise).
-	 * @param c : nombre de jetons.
+	 * @param relance : Le nombre de jetons (> à la dernière mise).
 	 */
-	public void relancer(int c)
+	public void relancer(int relance)
 	{
-		
+		if (relance > this.nbJetons)
+		{
+			/*Si le joueur tente de miser plus que ce qu'il possède, il est tapis.*/
+			this.nbJetonsMisés += this.nbJetons;
+			this.nbJetons = 0;
+			this.estTapis = true;
+		}
+		else
+		{
+			/*Si le joueur relance moins que son nombre total de jetons, on déduit sa relance de ses jetons.*/
+			this.nbJetonsMisés += relance;
+			this.nbJetons -= relance;
+		}
 	}
 
 	/**

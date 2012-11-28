@@ -41,7 +41,8 @@ public class Pot
 	 * Méthodes
 	 */
 	/**
-	 * On augmente le pot de c jetons.
+	 * On augmente le pot d'un certain nombre de jetons.
+	 * @param c : Le nombre de jetons à ajouter au pot.
 	 */
 	public void augmenterPot(int c)
 	{
@@ -50,6 +51,7 @@ public class Pot
 
 	/**
 	 * Renvoi le nombre de jetons contenu dans le pot.
+	 * @return : Le nombre de jetons que contient le pot.
 	 */
 	public int valeurPot()
 	{

@@ -32,18 +32,7 @@ public class Main
 		
 		}
 		
-		for (int i = 0; i < 51; i++)
-		{
-		try
-		{
-			{
-				Carte a = p.getCarte();
-				System.out.println(a);
-			}
-		catch (PlusDeCarteException e) {
-		    System.out.println("Toutes les cartes ont été tirées !");
-			
-		}
+		
 	
 
 	}

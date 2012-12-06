@@ -93,4 +93,18 @@ public class Paquet
 		return (this.paquetDeCarte[valeur]);
 
 	}
+	
+	
+	/**
+	 * On considère que les cartes sont remises dans le paquet.
+	 */
+	public void reinitialiserCarte()
+	{
+		this.nbCartesTirees = 0;
+		
+		for (int i = 0; i < 52; i++)
+		{
+			this.cartePresentes[i] = true;
+		}
+	}
 }

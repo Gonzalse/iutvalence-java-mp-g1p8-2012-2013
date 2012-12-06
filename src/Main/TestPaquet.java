@@ -15,6 +15,7 @@ public class TestPaquet
 	
 	/**
 	 * Programme permettant de tester les exceptions de la classe paquet.
+	 * @param args : Arguments.
 	 */
 	public static void main(String[] args)
 	{

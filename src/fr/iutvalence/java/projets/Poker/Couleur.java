@@ -9,5 +9,23 @@ package fr.iutvalence.java.projets.Poker;
 
 public enum Couleur
 {
-	CARREAU, TREFLE, PIQUE, COEUR;
+	/**
+	 * Représente la couleur de carreau : ♦.
+	 */
+	CARREAU,
+	
+	/**
+	 * Représente la couleur de trèfle :.
+	 */
+	TREFLE,
+	
+	/**
+	 * Représente la couleur de pique : ♠.
+	 */
+	PIQUE,
+	
+	/**
+	 * Représente la couleur de coeur : ♥.
+	 */
+	COEUR;
 }

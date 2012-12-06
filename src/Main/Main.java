@@ -1,62 +1,34 @@
 package Main;
 
-import java.util.Scanner;
-
 import fr.iutvalence.java.projets.Poker.*;
 
+/**
+ * <p>Titre : Main</p>
+ * <p>Description : Test de la partie.</p>
+ * @author Gonzalez Aftiss
+ * @version 1.0
+ */
 
 public class Main
 {
 
 	/**
 	 * @param args
+	 * @throws NbDeJoueursException : La condition 2 <= NbJoueurs <= 8 n'est pas respectée.
+	 * @throws PlusDeCarteException : Plus de 52 cartes ont été tiré.
 	 */
-	public static void main(String[] args)
+	public static void main(String[] args) throws NbDeJoueursException, PlusDeCarteException
 	{
 		Partie Poker = new Partie();
-		Paquet p = new Paquet();
 		
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Veuillez saisir un nom :");
-		String str = sc.nextLine();
-
-		Joueur j1 = new Joueur(str);
-		Joueur j2 = new Joueur("Hicham");
-		Poker.addJoueur(j1);
-		Poker.addJoueur(j2);
-		System.out.println("Le joueur " + j1.getNom() + " possède " + j1.getNbJetons() + " jetons. ");
-		System.out.println("Le joueur " + j2.getNom() + " possède " + j2.getNbJetons() + " jetons. ");
+		JoueurClavier J1 = new JoueurClavier("Hicham");
+		JoueurClavier J2 = new JoueurClavier("Seb");
+		JoueurClavier J3 = new JoueurClavier("Mahmoud");
 		
+		Poker.addJoueur(J1);
+		Poker.addJoueur(J2);
+		Poker.addJoueur(J3);
 		
-
-		
-		}
-		
-		
-	
-
+		Poker.demarrer();
 	}
-	/*	Carte C = new Carte(Couleur.TREFLE,Valeur.TROIS);
-		Carte D = new Carte(Couleur.CARREAU,Valeur.DAME);
-		Carte E = new Carte(Couleur.PIQUE,Valeur.AS);
-		System.out.print(C+"\n");
-		System.out.print(C.hashCode()+ "\n");
-		System.out.print(D.hashCode()+ "\n");
-		System.out.print(E.hashCode()+ "\n");
-		
-		Paquet P = new Paquet();
-	
-		for(int i = 0; i < 52; i++)
-		{
-			System.out.print(P.getCarte(i) + "\n");
-		}
-		
-		Pot Po = new Pot();
-		{
-			System.out.print(Po.nbJetonsPot + "\n");
-			Po.augmenterPot(80);
-			System.out.print(Po.nbJetonsPot);
-		}
-	}*/
-
 }

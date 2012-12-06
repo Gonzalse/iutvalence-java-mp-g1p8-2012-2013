@@ -9,5 +9,68 @@ package fr.iutvalence.java.projets.Poker;
 
 public enum Valeur
 {
-	AS, DEUX, TROIS, QUATRE, CINQ, SIX, SEPT, HUIT, NEUF, DIX, VALET, DAME, ROI;
+	/**
+	 * Représente la valeur : as.
+	 */
+	AS, 
+	
+	/**
+	 * Représente la valeur : deux.
+	 */
+	DEUX,
+	
+	/**
+	 * Représente la valeur : trois.
+	 */
+	TROIS,
+	
+	/**
+	 * Représente la valeur : quatre.
+	 */
+	QUATRE,
+	
+	/**
+	 * Représente la valeur : cinq.
+	 */
+	CINQ,
+	
+	/**
+	 * Représente la valeur : six.
+	 */
+	SIX,
+
+	/**
+	 * Représente la valeur : sept.
+	 */
+	SEPT,
+	
+	/**
+	 * Représente la valeur : huit.
+	 */
+	HUIT,
+	
+	/**
+	 * Représente la valeur : neuf.
+	 */
+	NEUF,
+	
+	/**
+	 * Représente la valeur : dix.
+	 */
+	DIX,
+	
+	/**
+	 * Représente la valeur : valet.
+	 */
+	VALET,
+	
+	/**
+	 * Représente la valeur : dame.
+	 */
+	DAME,
+	
+	/**
+	 * Représente la valeur : roi.
+	 */
+	ROI;
 }

@@ -7,7 +7,7 @@ package fr.iutvalence.java.projets.Poker;
  * @version 1.0
  */
 
-public class Joueur
+public class JoueurClavier
 {
 	/*
 	 * Attributs
@@ -31,7 +31,7 @@ public class Joueur
 	/**
 	 * Main du joueur composée de 2 cartes.
 	 */
-	private Carte[] main;
+	private Carte[] mainJoueur;
 
 	/**
 	 * Booléen qui a pour valeur faux et qui permet d'initialiser le joueur à "non tapis".
@@ -116,7 +116,7 @@ public class Joueur
 	 * @param nomJoueur
 	 *            : nom du joueur
 	 */
-	public Joueur(String nomJoueur)
+	public JoueurClavier(String nomJoueur)
 	{
 		// Initialisation du nom du joueur :
 		this.nom = nomJoueur;
@@ -125,7 +125,7 @@ public class Joueur
 		this.nbJetons = NBJETONS_DEFAUT;
 
 		// Initialisation de la main du joueur
-		this.main = new Carte[1];
+		this.mainJoueur = new Carte[2];
 		
 		// Initialisation des booléens du joueur à non tapis, non couché non check et non perdu.
 		this.estCouché = COUCHE_DEFAUT;
@@ -139,14 +139,6 @@ public class Joueur
 	 * Méthodes
 	 */
 	
-	/**
-	 * Permet d'obtenir le nombre de jeton du joueur.
-	 * @return le nombre de jetons du joueur.
-	 */
-	public String getNom()
-	{
-		return this.nom;
-	}
 	
 	/**
 	 * Permet d'obtenir le nombre de jeton du joueur.
@@ -194,18 +186,29 @@ public class Joueur
 	 */
 	public Carte[] getCarte()
 	{
-		return (this.main);
+		return (this.mainJoueur);
 	}
 	
 	
+	/**
+	 * Permet de donner deux cartes à un joueur.
+	 * @param premiereCarte : La première carte en main du joueur.
+	 * @param deuxiemeCarte : La deuxième carte en main du joueur.
+	 */
+	public void setCarte(Carte premiereCarte, Carte deuxiemeCarte)
+	{
+		this.mainJoueur[0] = premiereCarte;
+		this.mainJoueur[1] = deuxiemeCarte;		
+	}
 	
 	
 	/**
 	 * Permet à un joueur de miser un certain nombre de jetons.
 	 * @param mise : nombre de jetons que le joueur veut miser.
+	 * @return : le nombre de jetons à ajouter au pot (Correspond au nombre de jetons du joueur si celui-ci n'a pas assez pour suivre).
 	 */
 
-	public void miser (int mise) //TODO Void ou autre ?
+	public int suivre (int mise) //TODO Void ou autre ?
 	{
 		
 		
@@ -215,51 +218,106 @@ public class Joueur
 			this.nbJetonsMisés += this.nbJetons;
 			this.nbJetons = 0;
 			this.estTapis = true;
+			return this.nbJetons;
 		}
 		else
 		{
 			/*Si le joueur mise moins que son nombre total de jetons, on déduit sa mise de ses jetons.*/
 			this.nbJetonsMisés += mise;
 			this.nbJetons = this.nbJetons - mise;
+			return mise;
 		}
 	}
+	
+	
+	/**
+	 * Renvoi le nombre de jeton misé par le joueur.
+	 * @return : Le nombre de jeton misé.
+	 */
+	public int getNbJetonsMises()
+	{
+		return this.nbJetonsMisés;
+	}
+	
+	/**
+	 * Renvoi le nombre de jeton misé par le joueur.
+	 */
+	public void reinitialiserNbJetonsMises()
+	{
+		this.nbJetonsMisés = 0;
+	}
+	
+	
 
 	/**
 	 * Permet de relancer un certain nombre de jetons (La relance doit être supérieure à la dernière mise).
 	 * @param relance : Le nombre de jetons (> à la dernière mise).
+	 * @return : Le nombre de jetons à ajouter au pot.
 	 */
-	public void relancer(int relance)
+	public int relancer(int relance)
 	{
+		
 		if (relance > this.nbJetons)
 		{
 			/*Si le joueur tente de miser plus que ce qu'il possède, il est tapis.*/
 			this.nbJetonsMisés += this.nbJetons;
 			this.nbJetons = 0;
 			this.estTapis = true;
+			return this.nbJetons;
 		}
 		else
 		{
 			/*Si le joueur relance moins que son nombre total de jetons, on déduit sa relance de ses jetons.*/
 			this.nbJetonsMisés += relance;
 			this.nbJetons -= relance;
+			return relance;
 		}
 	}
 
 	/**
 	 * Permet de checker.
+	 * @param b : Booléen permettant d'indiquer si un joueur a checké ou non.
 	 */
-	public void checker()
+	public void setChecker(boolean b)
 	{
-		this.check = true;
+		this.check = b;
 	}
 
 	/**
 	 * Permet de se retirer de la manche.
+	 * @param b : Booléen permettant d'indiquer si un joueur est couché ou non.
 	 */
-	public void coucher()
+	public void setCoucher(boolean b)
 	{
-		this.estCouché = true;
+		this.estCouché = b;
+	}
+	
+	/**
+	 * Permet de savoir si un joueur est couché ou non.
+	 * @return : Un booléen indiquant si le joueur est couché (vrai) ou non (faux).
+	 */
+	public boolean getCoucher()
+	{
+		return this.estCouché;
+	}
+	
+	
+	/**
+	 * Permet de déclarer un joueur comme perdant.
+	 * @param b : Un booléen indiquant si le joueur perd ou non.
+	 */
+	public void setPerdu(boolean b)
+	{
+		this.a_perdu = b;
 	}
 
 	
+	/**
+	 * Permet de savoir si un joueur a perdu ou non.
+	 * @return : Un booléen indiquant si le joueur a perdu (vrai) ou non (faux).
+	 */
+	public boolean getPerdu()
+	{
+		return this.a_perdu;
+	}
 }

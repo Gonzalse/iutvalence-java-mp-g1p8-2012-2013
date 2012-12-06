@@ -18,17 +18,14 @@ public class Combinaison {
 	 * Attributs
 	 */
 	
-	// FIXME (FIXED) respecter les conventions d'écriture pour les contantes
 
 	
 	
 	/*
 	 * Constucteurs
 	 */
-	public Combinaison
-	{
-		
-	}
+	
+	// TODO fonction d'évaluation du jeu d'un joueur.
 	
 	/*
 	 * Méthodes

@@ -68,12 +68,17 @@ public class Carte
 
 	/**
 	 * Permet de comparer deux cartes.
-	 * @param c : la carte que l'on veut comparer.
+	 * @param o : la carte que l'on veut comparer.
 	 * @return vrai si la carte et celle placée en paramètre sont identiques, sinon faux.
 	 */
-	public boolean equals (Object c)
-	{
-		return ((this.valeur == c.getValeur()) && (this.couleur == c.getCouleur()));
+	public boolean equals (Object o)
+	{	
+		if (o instanceof Carte)
+		{
+			Carte c = (Carte) o;
+			return ((this.valeur == c.getValeur()) && (this.couleur == c.getCouleur()));
+		}
+		return false;
 	}
 	
 	/**
@@ -89,7 +94,78 @@ public class Carte
 	 */
 	public String toString()
 	{
-		return "Valeur : " + this.valeur + " Couleur : " + this.couleur;
+		Couleur c = this.getCouleur();
+		Valeur v = this.getValeur();
+		
+		String val = null;
+		String coul = null;
+		
+		String s;
+		
+		switch (v)
+		{
+			case DEUX: val = "2";
+					break;
+			case TROIS: val = "3";
+					break;
+			case QUATRE: val = "4";
+					break;
+			case CINQ: val = "5";
+					break;
+			case SIX: val = "6";
+					break;
+			case SEPT: val = "7";
+					break;
+			case HUIT: val = "8";
+					break;
+			case NEUF: val = "9";
+					break;
+			case DIX: val = "10";
+					break;
+			case VALET: val = "J";
+					break;
+			case DAME: val = "Q";
+					break;
+			case ROI: val = "K";
+					break;
+			case AS: val = "A";
+					break;
+		}
+		
+		
+		switch (c)
+		{
+			case PIQUE: coul = "♠";
+			break;
+			case CARREAU: coul = "♦";
+			break;
+			case COEUR: coul = "♥";
+			break;
+			case TREFLE: coul = "♣";
+			break;
+		}
+		
+		if (val == "10")
+		{
+			s = 	" _________ \n" +
+					"|         |\n" +
+					"|"+val+coul+"      |\n" +
+					"|         |\n" +
+					"|         |\n" +
+					"|      "+val+coul+"|\n" +
+					"|_________|\n";
+		}
+		else
+		{
+			s = 	" _________ \n" +
+					"|         |\n" +
+					"|"+val+coul+"       |\n" +
+					"|         |\n" +
+					"|         |\n" +
+					"|       "+val+coul+"|\n" +
+					"|_________|\n";
+		}
+		return s;
 	}
 
 }

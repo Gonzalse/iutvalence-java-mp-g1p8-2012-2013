@@ -11,15 +11,9 @@ public class PlusDeCarteException extends Exception
 {
 
 
-	public PlusDeCarteException()
-	{
-		super();
-	}
-
-		
-	public PlusDeCarteException(String message)
-	{
-		super(message);
-	}
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 }

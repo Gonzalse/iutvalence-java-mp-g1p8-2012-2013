@@ -10,4 +10,9 @@ package fr.iutvalence.java.projets.Poker;
 public class NbDeJoueursException extends Exception
 {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 }
